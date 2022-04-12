@@ -22,7 +22,7 @@ return (
 </div>
  <button onClick={clickHandler}>change Title</button>
 </Card>
-);
+ );
 }
 
 export default ExpenseItem;

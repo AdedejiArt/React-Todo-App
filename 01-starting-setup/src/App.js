@@ -1,5 +1,8 @@
-
+import React from "react";
+// import ExpensesFilter from "./components/Expenses/ExpensesFilter"
+import NewExpense from "./components/NewExpense/NewExpense";
 import NewComponent from "./components/Expenses/NewComponent";
+
 const App =(props)=> {
   const expenses=[{id:"e1",title:"Toilet Paper",amount:799.49, date:new Date(2021, 2, 12)},
   {id:"e2",title:"New TV", amount:799.49,date: new Date(2021,2,12)},
@@ -7,8 +10,19 @@ const App =(props)=> {
   {id:"e4",title:"New Desk(Wooden)",amount:450,date:new Date(2021,5,12)}
 
   ]
+  const addExpenseHandler=expense =>{
+    console.log('In App.js')
+    console.log(expense)
+  }
   return(
+    <div>
+    
+    <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
+     
     <NewComponent expenses={expenses}></NewComponent>
+    </div>
+ 
+
     
     
   )
